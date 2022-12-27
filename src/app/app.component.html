@@ -1,1 +1,23 @@
+<!-- <div style="text-align:center">
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
+
+
+    <input type="file" class="file-input" (change)="onFileSelected($event)">
+
+
+
+    <img [src]="image" width="50%" /> <br> <br>
+    <button type="button" (click)="recognizeImage()" [disabled]="!workerReady">Recognize Image</button>
+    <div *ngIf="workerReady && captureProgress > 0">
+        <h2>Result: </h2>
+        <h3 *ngIf="!ocrResult">Capture Progress: {{ captureProgress }}%</h3>
+        <p>{{ ocrResult }}</p>
+    </div>
+</div> -->
+
+
+
+
 <app-pdf-data></app-pdf-data>
