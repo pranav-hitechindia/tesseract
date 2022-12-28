@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as XLSX from "xlsx";
-
 @Component({
   selector: 'app-pdf-data',
-  templateUrl: './pdf-data.component.html',
-  styleUrls: ['./pdf-data.component.css']
+  template: '',
+  styles: ['']
 })
-export class PdfDataComponent implements OnInit {
+export class PdfDataComponent2 {
 
 
   excelData: any;
@@ -145,8 +144,6 @@ export class PdfDataComponent implements OnInit {
   // `
 
   constructor() { }
-
-  ngOnInit() { }
 
  
   // mannInvoice_String() {

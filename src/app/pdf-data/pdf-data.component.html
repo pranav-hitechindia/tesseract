@@ -1,14 +1,30 @@
 <!-- <p>
   pdf works!
 </p> -->
-
 <p>
   *Upload File which is provided in "<b>src/assets</b>" folder* 
 </p> <br>
-<input type="file" (change)="readExcel($event)"> <br> <br> <br><br>
+
+
+<select class='select-option'
+    #mySelect
+    (change)='onOptionsSelected(mySelect.value)'>
+
+    <option value="" disabled selected hidden>Choose a Invoice</option>
+    <option class='option'
+    *ngFor='let option of dropDown' 
+    [value]="option.name">{{option.name}}</option>
+
+</select> <br><br><br>
+
+
+
+<input type="file" *ngIf="submitBtn" (change)="readExcel($event)"> <br> <br> <br><br>
+
+
 
 <div >
   <!-- <button (click)="mannInvoice_String()">String</button> -->
-  <button (click)="mannInvoice_Excel()">Mann Invoice Excel</button> <br><br>
-  <!-- <button (click)="glitner_Excel()">Glitner Invoice Excel</button> -->
+  <!-- <button (click)="mannInvoice()">Mann Invoice Excel</button> <br><br> -->
+  <button (click)="submitInvoice()" *ngIf="excelData">Submit {{submitBtn}}</button>
 </div>
